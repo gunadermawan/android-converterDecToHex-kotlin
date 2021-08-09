@@ -25,5 +25,10 @@ class MainActivity : AppCompatActivity() {
             val binary = Integer.toHexString(i)
             output!!.setText(binary)
         }
+        reset = findViewById(R.id.reset)
+        reset!!.setOnClickListener {
+            input!!.setText("")
+            output!!.setText("")
+        }
     }
 }
