@@ -19,13 +19,16 @@ class MainActivity : AppCompatActivity() {
         input = findViewById(R.id.input)
         output = findViewById(R.id.output)
         submit = findViewById(R.id.submit)
+        //        jika tombol submit ditekan, maka lakukan aksi
         submit!!.setOnClickListener {
             val string = input!!.text.toString()
             val i = string.toInt()
             val binary = Integer.toHexString(i)
             output!!.setText(binary)
         }
+        //        inisialisasi tombol reset
         reset = findViewById(R.id.reset)
+        //        aksi ketika tombol reset ditekan
         reset!!.setOnClickListener {
             input!!.setText("")
             output!!.setText("")
